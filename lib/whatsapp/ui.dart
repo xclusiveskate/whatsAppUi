@@ -18,7 +18,7 @@ class _UiPageState extends State<UiPage> {
     return DefaultTabController(
         length: 4,
         initialIndex: 1,
-        animationDuration: const Duration(milliseconds: 5),
+        animationDuration: const Duration(microseconds: 1),
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.greenAccent,
@@ -63,19 +63,6 @@ class _UiPageState extends State<UiPage> {
           ),
           body:
               const TabBarView(children: [Text(""), Chat(), Status(), Call()]),
-
-          // floatingActionButton: TabBar == 0
-          //     ? null
-          //     : initialValue == 1
-          //         ? FloatingActionButton(
-          //             onPressed: () {}, child: Icon(Icons.message))
-          //         : initialValue == 2
-          //             ? FloatingActionButton(
-          //                 onPressed: () {}, child: Icon(Icons.camera))
-          //             : FloatingActionButton(
-          //                 onPressed: () {},
-          //                 child: Icon(Icons.call),
-          //               )),
         ));
   }
 }
